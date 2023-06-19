@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 610108fb4344c99438a816ec24732ba6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - illustration: {instanceID: 0}
+  - image: {instanceID: 0}
+  - cardName: {instanceID: 0}
+  - health: {instanceID: 0}
+  - manaCost: {instanceID: 0}
+  - _ClickClip: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
