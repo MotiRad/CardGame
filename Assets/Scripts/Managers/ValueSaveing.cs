@@ -11,6 +11,7 @@ public class ValueSaveing : MonoBehaviour
     void Start()
     {
         LoadValue();
+       
     }
 
     public void SaveVolume()

@@ -583,6 +583,8 @@ MonoBehaviour:
   musicSound:
   - name: BGSound
     clip: {fileID: 8300000, guid: 424961eb0ae4d374b85d72333e5c1f4c, type: 3}
+  mute: 0
+  muteMusic: 0
   musicSource: {fileID: 653862920}
 --- !u!1 &576326050
 GameObject:

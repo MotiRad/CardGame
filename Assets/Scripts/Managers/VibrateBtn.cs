@@ -6,5 +6,6 @@ public class VibrateBtn : MonoBehaviour
 {
     public void Vibratebtn(){
         Handheld.Vibrate();
+    
     }
 }

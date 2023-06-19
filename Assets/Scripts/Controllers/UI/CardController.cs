@@ -68,14 +68,29 @@ public class CardController : MonoBehaviour, IPointerEnterHandler , IPointerExit
     
     {
        
-       if(card.cardName == "HellDog")
+       if(card.cardName == "Alien")
        {
-        CardManager.instance.PlaySFX("ClickSound");
+        // صدای رهبر فضایی
+        CardManager.instance.PlaySFX("AlienSound");
+       }
+       else if(card.cardName == "Crocodile")
+       {
+        // صدای تمساح
+        CardManager.instance.PlaySFX("CrocodileSound");
+
+       }
+       else if(card.cardName == "Fox")
+       {
+        // صدای روباه
+        CardManager.instance.PlaySFX("FoxSound");
        }
        else
        {
-        Debug.Log("anothercard");
+        // صدای دزد دریایی
+        CardManager.instance.PlaySFX("PiratesSound");
+
        }
+        
         if(originalParent.name == $"Player{card.ownerID+1}PlayArea" || TurnManager.instance.currentPlayerTurn != card.ownerID)
         {
             

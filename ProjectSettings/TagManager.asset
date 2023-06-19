@@ -7,6 +7,10 @@ TagManager:
   - playArea2
   - playArea
   - GameMusic
+  - MusicOn
+  - MusicOf
+  - SoundOn
+  - SoundOf
   layers:
   - Default
   - TransparentFX

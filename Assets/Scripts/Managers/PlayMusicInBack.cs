@@ -8,8 +8,8 @@ public class PlayMusicInBack : MonoBehaviour
 {
      public static PlayMusicInBack playMusicInBack;
      public Sound[] musicSound;
-     private bool mute=false;
-      private bool muteMusic=false;
+     public bool mute=false;
+    public bool muteMusic=false;
     public AudioSource musicSource;
    
     void Start()
@@ -31,7 +31,7 @@ public class PlayMusicInBack : MonoBehaviour
             loadTM();
         }
 
-         if(!PlayerPrefs.HasKey("mutedSound")){
+        if(!PlayerPrefs.HasKey("mutedSound")){
             PlayerPrefs.SetInt("mutedSound",0);
             loadTS();
         }
@@ -40,6 +40,9 @@ public class PlayMusicInBack : MonoBehaviour
         }
         AudioListener.pause=mute;
         musicSource.mute=muteMusic;
+        Debug.Log(muteMusic);
+        
+
     }
     public void PlayMusic(string name){
         Sound s = Array.Find(musicSound,x=> x.name == name);
@@ -60,12 +63,11 @@ public class PlayMusicInBack : MonoBehaviour
             musicSource.mute=true;
         }
         else{
-              muteMusic=false;
+            muteMusic=false;
             musicSource.mute=false;
 
         }
         saveTM();
-       // musicSource.mute=!musicSource.mute;
     }
     public void ToggleSound(){
         if (mute==false){
@@ -94,11 +96,14 @@ public class PlayMusicInBack : MonoBehaviour
         PlayerPrefs.SetInt("mutedSound",mute?1:0);
     }
     private void loadTM(){
-        mute=PlayerPrefs.GetInt("mutedMusic")==1;
+        muteMusic=PlayerPrefs.GetInt("mutedMusic")==1;
 
     }
     private void saveTM(){
 
-        PlayerPrefs.SetInt("mutedMusic",mute?1:0);
+        PlayerPrefs.SetInt("mutedMusic",muteMusic?1:0);
     }
+    
+
+   
 }
